@@ -2,6 +2,69 @@
   text-align: center;
 }
 
+.banner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../../reading-the-Early-Church-Fathers.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 20vw;
+  border-top-style: solid;
+  border-top-width: 2vw;
+  border-top-color:#750e00d2;
+  border-bottom-style: solid;
+  border-bottom-width: 2vw;
+  border-bottom-color:#750e00d2;
+}
+
+.title-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10.5vw;
+  height: 5vw;
+  width: 39vw;
+  background-color:#750e00d2;
+}
+
+.title {
+  /* background-color:#1e1c1493; */
+  color:#ba8717;
+  font-size: 3vw;
+  -webkit-text-stroke: .008vw #fffdfb;
+  font-family: "Macondo";
+}
+
+.banner-top, .banner-bottom {
+  height: .75vw;
+  background-color:#ba8717;
+}
+
+.selection-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.favorites, .filter, .theme {
+  margin-top: 1.5vw;
+  margin-left: 5vw;
+  margin-right: 5vw;
+  height: 20vw;
+  width: 16vw;
+}
+
+.about {
+  margin-left: 86vw;
+}
+
+.header-photo {
+  height: 30vw;
+  width: 40vw;
+}
+
 .App-logo {
   height: 40vmin;
   pointer-events: none;
