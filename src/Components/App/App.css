@@ -33,7 +33,7 @@
   /* background-color:#1e1c1493; */
   color:#ba8717;
   font-size: 3vw;
-  -webkit-text-stroke: .008vw #fffdfb;
+  -webkit-text-stroke: .008vw #cfab5e;
   font-family: "Macondo";
 }
 
@@ -43,17 +43,33 @@
 }
 
 .selection-section {
+  margin-top: 1.5vw;
+  margin-left: 7vw;
+  margin-right: 7vw;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 
 .favorites, .filter, .theme {
-  margin-top: 1.5vw;
-  margin-left: 5vw;
-  margin-right: 5vw;
   height: 20vw;
-  width: 16vw;
+  width: 24vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-style: solid;
+  border-width: 1vw;
+  border-color: #750e00d2;
+}
+
+.favorites:hover, .filter:hover, .theme:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all ease-in-out .3s;
+}
+
+.favorites {
+  background-image: url("../../ND-facade.jpeg");
 }
 
 .about {
