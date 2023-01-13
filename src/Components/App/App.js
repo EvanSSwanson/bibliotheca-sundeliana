@@ -37,13 +37,28 @@ function App() {
             <div className="banner-bottom"></div>
             <div className="selection-section">
               <NavLink to='/favorites' className='favorites-link'>
-                <button className="favorites"></button>
+                <button className="favorites">
+                  <div className="duller">
+                    
+                  </div>
+                  <div className="option-title-border">
+                    <h1 className="favorites-title">FAVORITES</h1>
+                  </div>
+                </button>
               </NavLink>
               <NavLink to='/filter' className='filter-link'>
-                <button className="filter"></button>
+                <button className="filter">
+                  <div className="option-title-border">
+                   <h1 className="filter-title">FILTER</h1>
+                  </div>
+                </button>
               </NavLink>
               <NavLink to='/theme' className='theme-link'>
-                <button className="theme"></button>
+                <button className="theme">
+                  <div className="option-title-border">
+                    <h1 className="theme-title">THEME</h1>
+                  </div>
+                </button>
               </NavLink>
             </div>
             <p className="about">About</p>

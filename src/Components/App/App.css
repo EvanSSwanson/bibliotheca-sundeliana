@@ -30,16 +30,16 @@
 }
 
 .title {
-  /* background-color:#1e1c1493; */
   color:#ba8717;
   font-size: 3vw;
   -webkit-text-stroke: .008vw #cfab5e;
   font-family: "Macondo";
+  cursor: default;
 }
 
 .banner-top, .banner-bottom {
   height: .75vw;
-  background-color:#ba8717;
+  background-color:#cfab5e;;
 }
 
 .selection-section {
@@ -52,6 +52,9 @@
 }
 
 .favorites, .filter, .theme {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: 20vw;
   width: 24vw;
   background-size: cover;
@@ -66,19 +69,48 @@
   cursor: pointer;
   transform: scale(1.1);
   transition: all ease-in-out .3s;
+  border-color: #cfab5e;
+}
+
+.favorites:hover .favorites-title, .filter:hover .filter-title, .theme:hover .theme-title{
+  color:#cfab5e;
+  -webkit-text-stroke: .008vw #ba8717;
 }
 
 .favorites {
-  background-image: url("../../ND-facade.jpeg");
+  background-image: url("../../sts-peter-paul.png");
+}
+
+.filter {
+  background-image: url("../../fishe.jpg");
+}
+
+.theme {
+  background-image: url("../../Eucharist-2.jpeg");
+}
+
+.option-title-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5vw;
+  width: 18vw;
+  background-color:#750e00d2;
+}
+
+.favorites-title, .filter-title, .theme-title {
+  color:#ba8717;
+  font-size: 3vw;
+  -webkit-text-stroke: .008vw #cfab5e;
+  font-family: "Macondo";
 }
 
 .about {
   margin-left: 86vw;
 }
 
-.header-photo {
-  height: 30vw;
-  width: 40vw;
+a:link, a:visited, a:hover, a:active {
+  text-decoration: none;
 }
 
 .App-logo {
