@@ -56,7 +56,9 @@ const handleChange = (event) => {
                 onChange={(event) => handleChange(event)}
             />
             <button onClick={() => props.getData(`${chosenCode} ${verseNumber}`)}>SUBMIT</button>
+            <button onClick={() => props.addToFavorites(props.data, props.latinData)}>FAVORITE</button>
             <p>{props.data.text}</p>
+            <p>{props.latinData.text}</p>
         </div>
     )
 }
