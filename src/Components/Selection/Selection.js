@@ -47,18 +47,22 @@ const handleChange = (event) => {
                     {greekButtons}
                 </div>
             </div>
-            <p>{bookName}</p>
-            <input
-                type="text"
-                className="verse-number"
-                value={verseNumber}
-                placeholder="verse number"
-                onChange={(event) => handleChange(event)}
-            />
-            <button onClick={() => props.getData(`${chosenCode} ${verseNumber}`)}>SUBMIT</button>
-            <button onClick={() => props.addToFavorites(props.data, props.latinData)}>FAVORITE</button>
-            <p>{props.data.text}</p>
-            <p>{props.latinData.text}</p>
+            <div className="input-section">
+                <h3 className="selected-book-name">{bookName}</h3>
+                <input
+                    type="text"
+                    className="verse-number"
+                    value={verseNumber}
+                    placeholder="verse number"
+                    onChange={(event) => handleChange(event)}
+                />
+                <button className="submit-button" onClick={() => props.getData(`${chosenCode} ${verseNumber}`)}>SUBMIT</button>
+            </div>
+            <div className="display-container">
+                <p className="english-display">{props.data.text}</p>
+                <p className="latin-display">{props.latinData.text}</p>
+            </div>
+            <button className="favorite-button" onClick={() => props.addToFavorites(props.data, props.latinData)}>FAVORITE</button>
         </div>
     )
 }

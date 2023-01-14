@@ -45,6 +45,10 @@ const App = () => {
     setFavoriteQuotes(filteredFavorites)
   }
 
+  useEffect(() => {
+    getData("JHN 3:16")
+  })
+
   return (
     <main className="App">
       <Routes>
