@@ -19,7 +19,14 @@ const greekButtons = greekBible.map(book => {
 
 
     return(
-        <div>
+        <div className="Selection">
+            <nav className="nav-bar">
+                <div className="icon"></div>
+                <NavLink to='/' className='home-link'>
+                    <h1 className="home-title">BIBLIOTHECA SUNDELIANA</h1>
+                </NavLink>
+                <div className="nav-bar-top"></div>
+            </nav>
             {hebrewButtons}
             {greekButtons}
         </div>

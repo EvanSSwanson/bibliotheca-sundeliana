@@ -1,0 +1,39 @@
+.nav-bar {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    height: 7vw;
+    background-color:#cfab5e;
+    border-bottom-style: solid;
+    border-bottom-width: 1.5vw;
+    border-bottom-color:#750e00;
+}
+
+.icon {
+    background-image: url('../../icxc_nika.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin: 1vw;
+    height: 6vw;
+    width: 6vw;
+}
+
+.home-title {
+    margin-left: 1vw;
+    color:#000000;
+    font-size: 3vw;
+    font-family: "Macondo";
+}
+
+.home-title:hover {
+    cursor: pointer;
+    color:#ba8717;
+    -webkit-text-stroke: .008vw #f1eada;
+    transform: scale(1.1);
+    transition: all ease-in-out .3s;
+}
+
+a:link, a:visited, a:hover, a:active {
+    text-decoration: none;
+  }
