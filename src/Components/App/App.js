@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react"
 import { Route, Routes, NavLink } from "react-router-dom"
 import "./App.css";
 import Selection from '../Selection/Selection'
+import Favorites from '../Favorites/Favorites'
 
 const App = () => {
   const [data, setData] = useState({})
+  const [latinData, setLatinData] = useState({})
   const [favoriteQuotes, setFavoriteQuotes] = useState([])
   const getData = (source) => {
     fetch('https://bible-api.com/' + source)
@@ -17,12 +19,31 @@ const App = () => {
       }
     })
      .then(data => setData(data))
+     fetch('https://bible-api.com/' + source + '?translation=clementine')
+    .then(response => {
+      if (response.ok) {
+        return response.json();
+      } else {
+        throw new Error('Something went wrong ...');
+      }
+    })
+     .then(data => setLatinData(data))
   }
 
-  // useEffect(() => {
-  //   getData('https://bible-api.com/john%203:16?translation=kjv')
-  //   console.log("data has loaded!", data)
-  // }, [])
+  const addToFavorites = (newEnglish, newLatin) => {
+    const newObj = {
+      nameEnglish: newEnglish.reference,
+      nameLatin: newLatin.reference,
+      textEnglish: newEnglish.text,
+      textLatin: newLatin.text
+    }
+    setFavoriteQuotes([...favoriteQuotes, newObj])
+  }
+
+  const removeFromFavorites = (text) => {
+    const filteredFavorites = favoriteQuotes.filter(quote => quote.textEnglish !== text)
+    setFavoriteQuotes(filteredFavorites)
+  }
 
   return (
     <main className="App">
@@ -64,9 +85,8 @@ const App = () => {
             <p className="about">About</p>
           </div>}
         />
-        <Route path="/filter" element={<Selection getData={getData} data={data}/>}
-
-        />
+        <Route path="/filter" element={<Selection favoriteQuotes={favoriteQuotes} addToFavorites= {addToFavorites} getData={getData} data={data} latinData={latinData}/>}/>
+        <Route path="/favorites" element={<Favorites favoriteQuotes={favoriteQuotes} removeFromFavorites={removeFromFavorites} />}/>
       </Routes>
     </main>
   );
