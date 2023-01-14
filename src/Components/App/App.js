@@ -5,10 +5,10 @@ import "./App.css";
 import Selection from '../Selection/Selection'
 
 const App = () => {
-  const [data, setData] = useState([])
+  const [data, setData] = useState({})
   const [favoriteQuotes, setFavoriteQuotes] = useState([])
   const getData = (source) => {
-    fetch(source)
+    fetch('https://bible-api.com/' + source)
     .then(response => {
       if (response.ok) {
         return response.json();
@@ -19,10 +19,10 @@ const App = () => {
      .then(data => setData(data))
   }
 
-  useEffect(() => {
-    getData('https://bible-api.com/john%203:16?translation=kjv')
-    console.log("data has loaded!", data)
-  }, [])
+  // useEffect(() => {
+  //   getData('https://bible-api.com/john%203:16?translation=kjv')
+  //   console.log("data has loaded!", data)
+  // }, [])
 
   return (
     <main className="App">
@@ -64,7 +64,7 @@ const App = () => {
             <p className="about">About</p>
           </div>}
         />
-        <Route path="/filter" element={<Selection/>}
+        <Route path="/filter" element={<Selection getData={getData} data={data}/>}
 
         />
       </Routes>

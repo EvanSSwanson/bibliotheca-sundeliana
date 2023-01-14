@@ -34,6 +34,24 @@
     transition: all ease-in-out .3s;
 }
 
+.book-button-container {
+    display: flex;
+}
+
+.hebrew-books, .greek-books {
+    width: 50vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.hebrew-title, .greek-title {
+    color:#ba8717;
+    font-size: 3vw;
+    -webkit-text-stroke: .008vw #cfab5e;
+    font-family: "Macondo";
+    cursor: default;
+}
+
 a:link, a:visited, a:hover, a:active {
     text-decoration: none;
   }
