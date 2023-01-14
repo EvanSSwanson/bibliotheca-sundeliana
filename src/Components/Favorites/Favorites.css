@@ -1,0 +1,8 @@
+.favorites-header {
+    margin-right: 75vw;
+    color:#ba8717;
+    font-size: 3vw;
+    -webkit-text-stroke: .008vw #cfab5e;
+    font-family: "Macondo";
+    cursor: default;
+}

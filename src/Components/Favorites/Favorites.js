@@ -19,8 +19,6 @@ const Favorites = (props) => {
             </div>
         )
     })
-    //const [favoritesCards, setFavoritesCards] = useState()
-
 
     return (
         <div className="Favorites">
@@ -30,7 +28,10 @@ const Favorites = (props) => {
                     <h1 className="home-title">BIBLIOTHECA SUNDELIANA</h1>
                 </NavLink>
             </nav>
-            {cards}
+            <h1 className="favorites-header">Favorites</h1>
+            <div className="cards-container">
+                {cards}
+            </div>
         </div>
     )
 }
