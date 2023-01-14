@@ -94,8 +94,20 @@
   justify-content: center;
   align-items: center;
   height: 5vw;
-  width: 18vw;
+  width: 16vw;
   background-color:#750e00d2;
+}
+
+#favorites-border {
+  width: 17vw;
+}
+
+#filter-border {
+  width: 11vw;
+}
+
+#theme-border {
+  width: 12vw;
 }
 
 .favorites-title, .filter-title, .theme-title {

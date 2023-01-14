@@ -1,10 +1,10 @@
-import logo from "../../logo.svg";
 import React, { useState, useEffect } from "react"
 //import getData from "../../apicalls"
 import { Route, Routes, NavLink } from "react-router-dom"
 import "./App.css";
+import Selection from '../Selection/Selection'
 
-function App() {
+const App = () => {
   const [data, setData] = useState([])
   const [favoriteQuotes, setFavoriteQuotes] = useState([])
   const getData = (source) => {
@@ -41,21 +41,21 @@ function App() {
                   <div className="duller">
                     
                   </div>
-                  <div className="option-title-border">
+                  <div className="option-title-border" id="favorites-border">
                     <h1 className="favorites-title">FAVORITES</h1>
                   </div>
                 </button>
               </NavLink>
               <NavLink to='/filter' className='filter-link'>
                 <button className="filter">
-                  <div className="option-title-border">
+                  <div className="option-title-border" id="filter-border">
                    <h1 className="filter-title">FILTER</h1>
                   </div>
                 </button>
               </NavLink>
               <NavLink to='/theme' className='theme-link'>
                 <button className="theme">
-                  <div className="option-title-border">
+                  <div className="option-title-border" id="theme-border">
                     <h1 className="theme-title">THEME</h1>
                   </div>
                 </button>
@@ -64,10 +64,10 @@ function App() {
             <p className="about">About</p>
           </div>}
         />
-        <Route
+        <Route path="/filter" element={<Selection/>}
+
         />
       </Routes>
-        {/* <img src="https://www.gannett-cdn.com/presto/2019/04/16/USAT/ec6b48e5-214b-46c4-bd4d-d5ebf411fa14-GettyImages-636538866.jpg?width=1320&height=880&fit=crop&format=pjpg&auto=webp" className="header-photo" alt="logo" /> */}
     </main>
   );
 }
