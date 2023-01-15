@@ -1,0 +1,16 @@
+{
+    "reference": "Joannes 3:16",
+    "verses": [
+        {
+        "book_id": "JHN",
+        "book_name": "Joannes",
+        "chapter": 3,
+        "verse": 16,
+        "text": "Sic enim Deus dilexit mundum, ut Filium suum unigenitum daret : ut omnis qui credit in eum, non pereat, sed habeat vitam æternam."
+        }
+    ],
+    "text": "Sic enim Deus dilexit mundum, ut Filium suum unigenitum daret : ut omnis qui credit in eum, non pereat, sed habeat vitam æternam.",
+    "translation_id": "clementine",
+    "translation_name": "Clementine Latin Vulgate",
+    "translation_note": "Public Domain"
+}
