@@ -1,0 +1,71 @@
+.favorites-header {
+    margin-right: 75vw;
+    margin-top: .5vw;
+    margin-bottom: .5vw;
+    color:#ba8717;
+    font-size: 3vw;
+    -webkit-text-stroke: .008vw #cfab5e;
+    font-family: "Macondo";
+    cursor: default;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: .5vw;
+    margin-left: 1vw;
+    margin-right: 1vw;
+}
+
+.quote-card {
+    background-color:#fcfbf9;
+    border-style: solid;
+    border-color:#750e00d2;
+    border-width: .5vw;
+    height: 38vw;
+    width: 23vw;
+}
+
+.verse-name, .english-marker, .latin-marker, .english-text, .latin-text{
+    font-family: "Nanum Myeongjo";
+    font-weight:800;
+    font-size: 1.5vw;
+    color:#000000;
+    margin-left: 2vw;
+    margin-right: 2vw;
+    cursor: default;
+}
+
+.english-marker, .latin-marker {
+    font-size: 1.25vw;
+    margin-bottom: -.75vw;
+}
+
+.english-text, .latin-text {
+    font-size: 1vw;
+    margin: 1vw;
+}
+
+.remove {
+    margin: .1vw;
+    background-color:#cfab5e;
+    border-style: solid;
+    border-width: .1vw;
+    border-color:#ba8717;
+    border-radius: .6vw;
+    font-family: "Nanum Myeongjo";
+    font-weight:800;
+    font-size: 1.1vw;
+    height: 2vw;
+    width: 9vw;
+}
+
+.remove:hover {
+    cursor: pointer;
+    background-color:#750e00;
+    border-color:#cfab5e;
+    color:#fcfbf9;
+    -webkit-text-stroke: .02vw #fcfbf9;
+    transform: scale(1.1);
+    transition: all ease-in-out .3s;
+}

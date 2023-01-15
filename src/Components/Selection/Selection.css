@@ -10,7 +10,7 @@
 }
 
 .icon {
-    background-image: url('../../icxc_nika.png');
+    background-image: url("../../icxc_nika.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -36,12 +36,14 @@
 
 .book-button-container {
     display: flex;
+    margin-top: -2vw;
+    margin-bottom: -1vw;
+    margin-left: .75vw;
+    margin-right: .75vw;
 }
 
 .hebrew-books, .greek-books {
     width: 50vw;
-    margin-left: 1vw;
-    margin-right: 1vw;
 }
 
 .hebrew-title, .greek-title {
@@ -49,6 +51,81 @@
     font-size: 3vw;
     -webkit-text-stroke: .008vw #cfab5e;
     font-family: "Macondo";
+    cursor: default;
+    margin-bottom: .1vw;
+}
+
+.book-button, .submit-button, .favorite-button {
+    margin: .1vw;
+    background-color:#cfab5e;
+    border-style: solid;
+    border-width: .1vw;
+    border-color:#ba8717;
+    border-radius: .6vw;
+    font-family: "Nanum Myeongjo";
+    font-weight:800;
+    font-size: 1.1vw;
+    height: 2vw;
+    width: 9vw;
+}
+
+#SNG {
+    font-size: 1vw;
+}
+
+.book-button:hover, .submit-button:hover, .favorite-button:hover {
+    cursor: pointer;
+    background-color:#750e00;
+    border-color:#cfab5e;
+    color:#fcfbf9;
+    -webkit-text-stroke: .02vw #fcfbf9;
+    transform: scale(1.1);
+    transition: all ease-in-out .3s;
+}
+
+.input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1vw;
+}
+
+.selected-book-name {
+    font-family: "Nanum Myeongjo";
+    font-weight:800;
+    font-size: 2vw;
+    color:#fcfbf9;
+    margin-right: 1vw;
+    cursor: default;
+}
+
+.verse-number {
+    height: 1.7vw;
+    width: 4vw;
+    font-family: "Nanum Myeongjo";
+    font-weight:800;
+    font-size: 1vw;
+    margin-right: 1vw;
+}
+
+.display-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10.5vw;
+    width: 90vw;
+    margin-left: 5vw;
+    margin-bottom: 1vw;
+    background-color:#fcfbf9;
+}
+
+.english-display, .latin-display {
+    font-family: "Nanum Myeongjo";
+    font-weight:800;
+    font-size: 1.3vw;
+    color:#000000;
+    margin-left: 2vw;
+    margin-right: 2vw;
     cursor: default;
 }
 

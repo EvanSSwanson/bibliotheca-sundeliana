@@ -1,14 +1,14 @@
 import bookNames from "../../booknames"
-import React, { useState, useEffect } from "react"
-import { Route, Routes, NavLink } from "react-router-dom"
-import "./Selection.css";
+import React, { useState } from "react"
+import { NavLink } from "react-router-dom"
+import "./Selection.css"
 
 const Selection = (props) => {
-const [chosenCode, setChosenCode] = useState('JHN');
-const [bookName, setBookName] = useState('John')
-const [verseNumber, setVerseNumber] = useState('3:16')
-const hebrewBible = bookNames.filter(book => book.section === "OT");
-const greekBible = bookNames.filter(book => book.section === "NT");
+const [chosenCode, setChosenCode] = useState("JHN")
+const [bookName, setBookName] = useState("John")
+const [verseNumber, setVerseNumber] = useState("3:16")
+const hebrewBible = bookNames.filter(book => book.section === "OT")
+const greekBible = bookNames.filter(book => book.section === "NT")
 const hebrewButtons = hebrewBible.map(book => {
     return(
         <button className="book-button" id={book.code} onClick={() => assignBook(book.code, book.book)}>{book.book}</button>
@@ -27,7 +27,7 @@ const assignBook = (code, name) => {
 
 const handleChange = (event) => {
     setVerseNumber(event.target.value);
-  };
+  }
 
     return(
         <div className="Selection">
@@ -47,20 +47,24 @@ const handleChange = (event) => {
                     {greekButtons}
                 </div>
             </div>
-            <p>{bookName}</p>
-            <input
-                type="text"
-                className="verse-number"
-                value={verseNumber}
-                placeholder="verse number"
-                onChange={(event) => handleChange(event)}
-            />
-            <button onClick={() => props.getData(`${chosenCode} ${verseNumber}`)}>SUBMIT</button>
-            <button onClick={() => props.addToFavorites(props.data, props.latinData)}>FAVORITE</button>
-            <p>{props.data.text}</p>
-            <p>{props.latinData.text}</p>
+            <div className="input-section">
+                <h3 className="selected-book-name">{bookName}</h3>
+                <input
+                    type="text"
+                    className="verse-number"
+                    value={verseNumber}
+                    placeholder="verse number"
+                    onChange={(event) => handleChange(event)}
+                />
+                <button className="submit-button" onClick={() => props.getData(`${chosenCode} ${verseNumber}`)}>SUBMIT</button>
+            </div>
+            <div className="display-container">
+                <p className="english-display">{props.data.text}</p>
+                <p className="latin-display">{props.latinData.text}</p>
+            </div>
+            <button className="favorite-button" onClick={() => props.addToFavorites(props.data, props.latinData)}>FAVORITE</button>
         </div>
     )
 }
 
-export default Selection;
+export default Selection

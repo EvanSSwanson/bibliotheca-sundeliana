@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react"
-import { Route, Routes, NavLink } from "react-router-dom"
-import "./Favorites.css";
+import { NavLink } from "react-router-dom"
+import "./Favorites.css"
 
 const Favorites = (props) => {
     const cards = props.favoriteQuotes.map(quote => {
         return(
             <div className="quote-card">
-                <h2 className="verse-name">{quote.nameEnglish}/{quote.nameLatin}</h2>
+                <h2 className="verse-name">{quote.nameEnglish}<br></br>{quote.nameLatin}</h2>
                 <div className="english-box">
                     <h3 className="english-marker">English:</h3>
                     <p className="english-text">{quote.textEnglish}</p>
@@ -19,8 +18,6 @@ const Favorites = (props) => {
             </div>
         )
     })
-    //const [favoritesCards, setFavoritesCards] = useState()
-
 
     return (
         <div className="Favorites">
@@ -30,9 +27,12 @@ const Favorites = (props) => {
                     <h1 className="home-title">BIBLIOTHECA SUNDELIANA</h1>
                 </NavLink>
             </nav>
-            {cards}
+            <h1 className="favorites-header">Favorites</h1>
+            <div className="cards-container">
+                {cards}
+            </div>
         </div>
     )
 }
 
-export default Favorites;
+export default Favorites
