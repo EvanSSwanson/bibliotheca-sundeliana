@@ -14,8 +14,8 @@ Bibliotheca Sundeliana is a web app that allows users to interact with a bible v
 - ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=plastic)
 
 ### Visual Demo
-</br>
-<img src="./putrid-pepinos.gif" alt="App preview">
+
+![Brief features gif](https://media.giphy.com/media/oYb53u2PkUghj1NflL/giphy.gif)
 
 ### Installation Instructions
 1. Clone the repo
@@ -30,7 +30,7 @@ Bibliotheca Sundeliana is a web app that allows users to interact with a bible v
 3. Enter the following url in your browser (if not already done automatically): http://localhost:3000/
 
 ### App Preview 
-You can visit the live site [here]().
+You can visit the live site [here](https://bibliotheca-sundeliana.netlify.app/).
 
 ## Goals: Building confidence with...
 - Using React.
