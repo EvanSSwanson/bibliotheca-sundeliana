@@ -19,6 +19,7 @@ const App = () => {
       }
     })
      .then(data => setData(data))
+     .then(data => console.log(data))
      .catch(error => alert("not a valid verse!"))
      fetch("https://bible-api.com/" + source + "?translation=clementine")
     .then(response => {
@@ -29,6 +30,7 @@ const App = () => {
       }
     })
      .then(data => setLatinData(data))
+     .then(data => console.log(data))
   }
 
   const addToFavorites = (newEnglish, newLatin) => {
