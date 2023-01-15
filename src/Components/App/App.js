@@ -19,6 +19,7 @@ const App = () => {
       }
     })
      .then(data => setData(data))
+     .catch(error => alert("not a valid verse!"))
      fetch('https://bible-api.com/' + source + '?translation=clementine')
     .then(response => {
       if (response.ok) {
@@ -31,23 +32,22 @@ const App = () => {
   }
 
   const addToFavorites = (newEnglish, newLatin) => {
-    const newObj = {
+    const newQuote = {
       nameEnglish: newEnglish.reference,
       nameLatin: newLatin.reference,
       textEnglish: newEnglish.text,
       textLatin: newLatin.text
     }
-    setFavoriteQuotes([...favoriteQuotes, newObj])
+    const duplicateTestArray = favoriteQuotes.filter(quote => quote.nameEnglish === newQuote.nameEnglish)
+    if (duplicateTestArray.length === 0) {
+      setFavoriteQuotes([...favoriteQuotes, newQuote])
+    }
   }
 
   const removeFromFavorites = (text) => {
     const filteredFavorites = favoriteQuotes.filter(quote => quote.textEnglish !== text)
     setFavoriteQuotes(filteredFavorites)
   }
-
-  useEffect(() => {
-    getData("JHN 3:16")
-  })
 
   return (
     <main className="App">
@@ -72,7 +72,7 @@ const App = () => {
                 </button>
               </NavLink>
               <NavLink to='/filter' className='filter-link'>
-                <button className="filter">
+                <button className="filter" onClick={() => getData("JHN 3:16")}>
                   <div className="option-title-border" id="filter-border">
                    <h1 className="filter-title">FILTER</h1>
                   </div>
