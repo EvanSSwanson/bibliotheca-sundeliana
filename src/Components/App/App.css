@@ -44,15 +44,15 @@
 
 .selection-section {
   margin-top: 1.5vw;
-  margin-left: 7vw;
-  margin-right: 7vw;
+  margin-left: 20vw;
+  margin-right: 20vw;
   margin-bottom: .75vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.favorites, .filter, .theme {
+.favorites, .filter {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -66,14 +66,14 @@
   border-color: #750e00d2;
 }
 
-.favorites:hover, .filter:hover, .theme:hover {
+.favorites:hover, .filter:hover {
   cursor: pointer;
   transform: scale(1.1);
   transition: all ease-in-out .3s;
   border-color: #cfab5e;
 }
 
-.favorites:hover .favorites-title, .filter:hover .filter-title, .theme:hover .theme-title{
+.favorites:hover .favorites-title, .filter:hover .filter-title{
   color:#cfab5e;
   -webkit-text-stroke: .008vw #ba8717;
 }
@@ -84,10 +84,6 @@
 
 .filter {
   background-image: url("../../fishe.jpg");
-}
-
-.theme {
-  background-image: url("../../Eucharist-2.jpeg");
 }
 
 .option-title-border {
@@ -107,11 +103,7 @@
   width: 11vw;
 }
 
-#theme-border {
-  width: 12vw;
-}
-
-.favorites-title, .filter-title, .theme-title {
+.favorites-title, .filter-title {
   color:#ba8717;
   font-size: 3vw;
   -webkit-text-stroke: .008vw #cfab5e;
@@ -128,39 +120,4 @@
 
 a:link, a:visited, a:hover, a:active {
   text-decoration: none;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
