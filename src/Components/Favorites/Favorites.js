@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { Route, Routes, NavLink } from "react-router-dom"
-import "./Favorites.css";
+import { NavLink } from "react-router-dom"
+import "./Favorites.css"
 
 const Favorites = (props) => {
     const cards = props.favoriteQuotes.map(quote => {
@@ -36,4 +35,4 @@ const Favorites = (props) => {
     )
 }
 
-export default Favorites;
+export default Favorites

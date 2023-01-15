@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from "react"
-import { Route, Routes, NavLink } from "react-router-dom"
-import "./Theme.css";
+import { NavLink } from "react-router-dom"
+import "./Theme.css"
 
 const Theme = () => {
 

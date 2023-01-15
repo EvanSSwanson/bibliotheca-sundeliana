@@ -1,14 +1,14 @@
 import bookNames from "../../booknames"
-import React, { useState, useEffect } from "react"
-import { Route, Routes, NavLink } from "react-router-dom"
-import "./Selection.css";
+import React, { useState } from "react"
+import { NavLink } from "react-router-dom"
+import "./Selection.css"
 
 const Selection = (props) => {
-const [chosenCode, setChosenCode] = useState('JHN');
-const [bookName, setBookName] = useState('John')
-const [verseNumber, setVerseNumber] = useState('3:16')
-const hebrewBible = bookNames.filter(book => book.section === "OT");
-const greekBible = bookNames.filter(book => book.section === "NT");
+const [chosenCode, setChosenCode] = useState("JHN")
+const [bookName, setBookName] = useState("John")
+const [verseNumber, setVerseNumber] = useState("3:16")
+const hebrewBible = bookNames.filter(book => book.section === "OT")
+const greekBible = bookNames.filter(book => book.section === "NT")
 const hebrewButtons = hebrewBible.map(book => {
     return(
         <button className="book-button" id={book.code} onClick={() => assignBook(book.code, book.book)}>{book.book}</button>
@@ -27,7 +27,7 @@ const assignBook = (code, name) => {
 
 const handleChange = (event) => {
     setVerseNumber(event.target.value);
-  };
+  }
 
     return(
         <div className="Selection">
@@ -67,4 +67,4 @@ const handleChange = (event) => {
     )
 }
 
-export default Selection;
+export default Selection

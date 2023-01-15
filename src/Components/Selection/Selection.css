@@ -10,7 +10,7 @@
 }
 
 .icon {
-    background-image: url('../../icxc_nika.png');
+    background-image: url("../../icxc_nika.png");
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
