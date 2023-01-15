@@ -22,16 +22,9 @@ describe("home page", () => {
     cy.get(".filter").click()
     cy.location("pathname").should("eq", "/filter")
   });
-  it("Should have a Theme box", () => {
-    cy.get(".theme").should("have.text", "THEME")
-  });
-  it("Should send you to the theme page", () => {
-    cy.get(".theme").click()
-    cy.location("pathname").should("eq", "/theme")
-  });
   it("Should have a title to click on to send you home", () => {
-    cy.get(".theme").click()
-    cy.location("pathname").should("eq", "/theme")
+    cy.get(".favorites").click()
+    cy.location("pathname").should("eq", "/favorites")
     cy.get(".home-link").click()
     cy.location("pathname").should("eq", "/")
   });

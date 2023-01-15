@@ -80,13 +80,6 @@ const App = () => {
                   </div>
                 </button>
               </NavLink>
-              <NavLink to="/theme" className="theme-link">
-                <button className="theme">
-                  <div className="option-title-border" id="theme-border">
-                    <h1 className="theme-title">THEME</h1>
-                  </div>
-                </button>
-              </NavLink>
             </div>
             <a className="about" href="https://github.com/EvanSSwanson/bibliotheca-sundeliana">GitHub</a>
           </div>}
