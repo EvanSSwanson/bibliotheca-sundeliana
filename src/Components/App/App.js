@@ -86,7 +86,6 @@ const App = () => {
         />
         <Route path="/filter" element={<Selection favoriteQuotes={favoriteQuotes} addToFavorites= {addToFavorites} getData={getData} data={data} latinData={latinData}/>}/>
         <Route path="/favorites" element={<Favorites favoriteQuotes={favoriteQuotes} removeFromFavorites={removeFromFavorites} />}/>
-        <Route path="/theme" element={<Theme/>}/>
       </Routes>
     </main>
   )
