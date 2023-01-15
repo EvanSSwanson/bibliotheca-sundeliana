@@ -46,6 +46,7 @@
   margin-top: 1.5vw;
   margin-left: 7vw;
   margin-right: 7vw;
+  margin-bottom: .75vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -119,6 +120,10 @@
 
 .about {
   margin-left: 86vw;
+  font-family: "Nanum Myeongjo";
+  font-weight:800;
+  font-size: 1vw;
+  color:#fcfbf9;
 }
 
 a:link, a:visited, a:hover, a:active {
