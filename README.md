@@ -12,6 +12,7 @@ Bibliotheca Sundeliana is a web app that allows users to interact with a bible v
 - ![Javascript](https://img.shields.io/badge/-Javascript-F7DF1E?logo=javascript&logoColor=white&style=plastic)
 - ![CSS3](https://img.shields.io/badge/-CSS3-1572B6?logo=css3&logoColor=white&style=plastic)
 - ![HTML5](https://img.shields.io/badge/-HTML5-E34F26?logo=html5&logoColor=white&style=plastic)
+- [Bible API](https://bible-api.com/)
 
 ### Visual Demo
 
