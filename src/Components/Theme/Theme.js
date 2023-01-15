@@ -11,7 +11,7 @@ const Theme = () => {
                     <h1 className="home-title">BIBLIOTHECA SUNDELIANA</h1>
                 </NavLink>
             </nav>
-            <h1 className="message">Work in Progress!</h1>
+            <h1 className="message">Work in Progress!<br></br>Soon you can view a selection of verses by theme!</h1>
         </div>
     )
 }
