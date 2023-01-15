@@ -4,7 +4,7 @@ import "./Favorites.css"
 const Favorites = (props) => {
     const cards = props.favoriteQuotes.map(quote => {
         return(
-            <div className="quote-card">
+            <div className="quote-card" id={quote.nameEnglish}>
                 <h2 className="verse-name">{quote.nameEnglish}<br></br>{quote.nameLatin}</h2>
                 <div className="english-box">
                     <h3 className="english-marker">English:</h3>
