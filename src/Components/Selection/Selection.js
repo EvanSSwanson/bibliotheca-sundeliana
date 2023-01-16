@@ -2,6 +2,7 @@ import bookNames from "../../booknames"
 import React, { useState } from "react"
 import { NavLink } from "react-router-dom"
 import "./Selection.css"
+import PropTypes from 'prop-types';
 
 const Selection = (props) => {
 const [chosenCode, setChosenCode] = useState("JHN")
@@ -11,12 +12,12 @@ const hebrewBible = bookNames.filter(book => book.section === "OT")
 const greekBible = bookNames.filter(book => book.section === "NT")
 const hebrewButtons = hebrewBible.map(book => {
     return(
-        <button className="book-button" id={book.code} onClick={() => assignBook(book.code, book.book)}>{book.book}</button>
+        <button className="book-button" id={book.code} key={book.code} onClick={() => assignBook(book.code, book.book)}>{book.book}</button>
     )
 })
 const greekButtons = greekBible.map(book => {
     return(
-        <button className="book-button" id={book.code} onClick={() => assignBook(book.code, book.book)}>{book.book}</button>
+        <button className="book-button" id={book.code} key={book.code} onClick={() => assignBook(book.code, book.book)}>{book.book}</button>
     )
 })
 
@@ -68,3 +69,10 @@ const handleChange = (event) => {
 }
 
 export default Selection
+
+Selection.propTypes = {
+    addToFavorites: PropTypes.func,
+    getData: PropTypes.func,
+    data: PropTypes.object,
+    latinData: PropTypes.object
+}

@@ -3,7 +3,6 @@ import { Route, Routes, NavLink } from "react-router-dom"
 import "./App.css"
 import Selection from "../Selection/Selection"
 import Favorites from "../Favorites/Favorites"
-import Theme from "../Theme/Theme"
 
 const App = () => {
   const [data, setData] = useState({})
@@ -19,7 +18,6 @@ const App = () => {
       }
     })
      .then(data => setData(data))
-     .then(data => console.log(data))
      .catch(error => alert("not a valid verse!"))
      fetch("https://bible-api.com/" + source + "?translation=clementine")
     .then(response => {
@@ -30,7 +28,6 @@ const App = () => {
       }
     })
      .then(data => setLatinData(data))
-     .then(data => console.log(data))
   }
 
   const addToFavorites = (newEnglish, newLatin) => {
@@ -84,9 +81,8 @@ const App = () => {
             <a className="about" href="https://github.com/EvanSSwanson/bibliotheca-sundeliana">GitHub</a>
           </div>}
         />
-        <Route path="/filter" element={<Selection favoriteQuotes={favoriteQuotes} addToFavorites= {addToFavorites} getData={getData} data={data} latinData={latinData}/>}/>
+        <Route path="/filter" element={<Selection addToFavorites= {addToFavorites} getData={getData} data={data} latinData={latinData}/>}/>
         <Route path="/favorites" element={<Favorites favoriteQuotes={favoriteQuotes} removeFromFavorites={removeFromFavorites} />}/>
-        <Route path="/theme" element={<Theme/>}/>
       </Routes>
     </main>
   )

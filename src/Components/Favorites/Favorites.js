@@ -1,10 +1,11 @@
 import { NavLink } from "react-router-dom"
 import "./Favorites.css"
+import PropTypes from 'prop-types';
 
 const Favorites = (props) => {
     const cards = props.favoriteQuotes.map(quote => {
         return(
-            <div className="quote-card" id={quote.nameEnglish}>
+            <div className="quote-card" id={quote.nameEnglish} key={quote.nameEnglish}>
                 <h2 className="verse-name">{quote.nameEnglish}<br></br>{quote.nameLatin}</h2>
                 <div className="english-box">
                     <h3 className="english-marker">English:</h3>
@@ -36,3 +37,8 @@ const Favorites = (props) => {
 }
 
 export default Favorites
+
+Favorites.propTypes = {
+    favoriteQuotes: PropTypes.array,
+    removeFromFavorites: PropTypes.func
+}
